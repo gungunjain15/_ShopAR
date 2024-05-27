@@ -212,6 +212,60 @@
 })(jQuery);
 
 
+
+
+
+$(document).ready(function() {
+  // Function to redirect to login page
+  function redirectToLogin() {
+      window.location.href = 'login.html';
+  }
+
+  // Check if the user is authenticated
+  function isAuthenticated() {
+      return sessionStorage.getItem('isAuthenticated') === 'true';
+  }
+
+  // Check if the user has already been redirected once
+  function hasBeenRedirected() {
+      return sessionStorage.getItem('hasBeenRedirected') === 'true';
+  }
+
+  // If user is not authenticated and hasn't been redirected before, set up event handlers to redirect to login
+  if (!isAuthenticated() && !hasBeenRedirected()) {
+      let isScrolling = false;
+
+      // Set a timer when scrolling starts
+      $(window).on('scroll', function() {
+          isScrolling = true;
+          setTimeout(function() {
+              isScrolling = false; // Reset scrolling status after a short delay
+          }, 100);
+      });
+
+      // Capture click events on all elements except scrolling
+      $('body').on('click', function(event) {
+          if (!isScrolling) {
+              sessionStorage.setItem('hasBeenRedirected', 'true');
+              redirectToLogin();
+          }
+      });
+
+      // Prevent redirection when interacting with scroll
+      $(window).on('mousewheel DOMMouseScroll', function(event) {
+          isScrolling = true;
+          setTimeout(function() {
+              isScrolling = false; // Reset scrolling status after a short delay
+          }, 100);
+      });
+  }
+});
+
+
+
+
+
+
 // featured_newarrival_onsale
 
 const jewellery=document.getElementById('jewellery');
