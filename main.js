@@ -210,3 +210,135 @@
     $(".product-details-large " + $href).addClass("active show");
   });
 })(jQuery);
+
+
+// featured_newarrival_onsale
+
+const jewellery=document.getElementById('jewellery');
+const watch=document.getElementById('watch');
+const shoes=document.getElementById('shoes');
+const box1=document.getElementById('1');
+const box2=document.getElementById('2');
+const box3=document.getElementById('3');
+const jewellery_featured=document.getElementById('jewellery_featured');
+const watch_featured=document.getElementById('watch_featured');
+const shoes_featured=document.getElementById('shoes_featured');
+const jewellery_arrival=document.getElementById('jewellery_arrivals');
+const jewellery_onsale=document.getElementById('jewellery_onsale');
+// const featured1=document.getElementById('featured1');
+// const arrival1=document.getElementById('arrival1');
+// const onsale1=document.getElementById('onsale1');
+// const featured2=document.getElementById('featured2');
+// const arrival2=document.getElementById('arrival2');
+// const onsale2=document.getElementById('onsale2');
+// const featured3=document.getElementById('featured3');
+// const arrival3=document.getElementById('arrival3');
+// const onsale3=document.getElementById('onsale3');
+
+jewellery.addEventListener('click',function(){
+    box2.style.display="none";
+    box3.style.display="none";
+    box1.style.display="block";
+    jewellery_featured.style.display="block";
+    jewellery_arrival.style.display="block";
+    jewellery_featured.style.display="block";
+    watch_featured.style.display="none";
+    shoes_featured.style.display="none";
+
+})
+watch.addEventListener('click',function(){
+  box3.style.display="none";
+  box1.style.display="none";
+  box2.style.display="block";
+  watch_featured.style.display="block";
+  jewellery_featured.style.display="none";
+  jewellery_arrival.style.display="none";
+  jewellery_featured.style.display="none";
+  shoes_featured.style.display="none";
+
+})
+
+shoes.addEventListener('click',function(){
+  box1.style.display="none";
+  box2.style.display="none";
+  box3.style.display="block";
+  shoes_featured.style.display="block";
+  watch_featured.style.display="none";
+  jewellery_featured.style.display="none";
+  jewellery_arrival.style.display="none";
+  jewellery_featured.style.display="none";
+})
+
+
+// featured1.addEventListener('onclick',function(){
+//   jewellery_featured.display="block";
+//   jewellery_arrival.style.display="none";
+//   jewellery_onsale.style.display="none";
+//   shoes_featured.style.display="none";
+//   watch_featured.style.display="none";
+
+// })
+
+// featured2.addEventListener('onclick',function(){
+//   jewellery_featured.display="none";
+//   jewellery_arrival.style.display="none";
+//   jewellery_onsale.style.display="none";
+//   shoes_featured.style.display="none";
+//   watch_featured.style.display="block";
+
+// })
+
+// featured3.addEventListener('click',function(){
+//   jewellery_featured.display="none";
+//   jewellery_arrival.style.display="none";
+//   jewellery_onsale.style.display="none";
+//   shoes_featured.style.display="block";
+//   watch_featured.style.display="none";
+
+// })
+// arrival1.addEventListener('click',function(){
+//   jewellery_featured.display="none";
+//   jewellery_arrival.style.display="block";
+//   jewellery_onsale.style.display="none";
+//   shoes_featured.style.display="none";
+//   watch_featured.style.display="none";
+
+// })
+// onsale1.addEventListener('click',function(){
+//   jewellery_featured.display="none";
+//   jewellery_arrival.style.display="none";
+//   jewellery_onsale.style.display="block";
+//   shoes_featured.style.display="none";
+//   watch_featured.style.display="none";
+
+// })
+// box2.addEventListener('click',function(){
+//   jewellery_featured.style.display="none";
+
+//   shoes_featured.style.display="none";
+//   watch_featured.style.display="block";
+// })
+// box3.addEventListener('click',function(){
+//   jewellery_featured.style.display="none";
+//   watch_featured.style.display="none";
+//   shoes_featured.style.display="block";
+// })
+
+// featured1.addEventListener('click',function(){
+//   jewellery_featured.display="block";
+//   shoes_featured.style.display="none";
+//   watch_featured.style.display="none";
+
+// })
+// box2.addEventListener('click',function(){
+//   jewellery_featured.style.display="none";
+//   shoes_featured.style.display="none";
+//   watch_featured.style.display="block";
+// })
+// box3.addEventListener('click',function(){
+//   jewellery_featured.style.display="none";
+//   watch_featured.style.display="none";
+//   shoes_featured.style.display="block";
+// })
+
+
