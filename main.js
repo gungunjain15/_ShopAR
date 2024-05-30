@@ -211,74 +211,65 @@
   });
 })(jQuery);
 
-
-
-
-
-$(document).ready(function() {
+$(document).ready(function () {
   // Function to redirect to login page
   function redirectToLogin() {
-      window.location.href = 'login.html';
+    window.location.href = "login.html";
   }
 
   // Check if the user is authenticated
   function isAuthenticated() {
-      return sessionStorage.getItem('isAuthenticated') === 'true';
+    return sessionStorage.getItem("isAuthenticated") === "true";
   }
 
   // Check if the user has already been redirected once
   function hasBeenRedirected() {
-      return sessionStorage.getItem('hasBeenRedirected') === 'true';
+    return sessionStorage.getItem("hasBeenRedirected") === "true";
   }
 
   // If user is not authenticated and hasn't been redirected before, set up event handlers to redirect to login
   if (!isAuthenticated() && !hasBeenRedirected()) {
-      let isScrolling = false;
+    let isScrolling = false;
 
-      // Set a timer when scrolling starts
-      $(window).on('scroll', function() {
-          isScrolling = true;
-          setTimeout(function() {
-              isScrolling = false; // Reset scrolling status after a short delay
-          }, 100);
-      });
+    // Set a timer when scrolling starts
+    $(window).on("scroll", function () {
+      isScrolling = true;
+      setTimeout(function () {
+        isScrolling = false; // Reset scrolling status after a short delay
+      }, 100);
+    });
 
-      // Capture click events on all elements except scrolling
-      $('body').on('click', function(event) {
-          if (!isScrolling) {
-              sessionStorage.setItem('hasBeenRedirected', 'true');
-              redirectToLogin();
-          }
-      });
+    // Capture click events on all elements except scrolling
+    $("body").on("click", function (event) {
+      if (!isScrolling) {
+        sessionStorage.setItem("hasBeenRedirected", "true");
+        redirectToLogin();
+      }
+    });
 
-      // Prevent redirection when interacting with scroll
-      $(window).on('mousewheel DOMMouseScroll', function(event) {
-          isScrolling = true;
-          setTimeout(function() {
-              isScrolling = false; // Reset scrolling status after a short delay
-          }, 100);
-      });
+    // Prevent redirection when interacting with scroll
+    $(window).on("mousewheel DOMMouseScroll", function (event) {
+      isScrolling = true;
+      setTimeout(function () {
+        isScrolling = false; // Reset scrolling status after a short delay
+      }, 100);
+    });
   }
 });
 
-
-
-
-
-
 // featured_newarrival_onsale
 
-const jewellery=document.getElementById('jewellery');
-const watch=document.getElementById('watch');
-const shoes=document.getElementById('shoes');
-const box1=document.getElementById('1');
-const box2=document.getElementById('2');
-const box3=document.getElementById('3');
-const jewellery_featured=document.getElementById('jewellery_featured');
-const watch_featured=document.getElementById('watch_featured');
-const shoes_featured=document.getElementById('shoes_featured');
-const jewellery_arrival=document.getElementById('jewellery_arrivals');
-const jewellery_onsale=document.getElementById('jewellery_onsale');
+const jewellery = document.getElementById("jewellery");
+const watch = document.getElementById("watch");
+const shoes = document.getElementById("shoes");
+const box1 = document.getElementById("1");
+const box2 = document.getElementById("2");
+const box3 = document.getElementById("3");
+const jewellery_featured = document.getElementById("jewellery_featured");
+const watch_featured = document.getElementById("watch_featured");
+const shoes_featured = document.getElementById("shoes_featured");
+const jewellery_arrival = document.getElementById("jewellery_arrivals");
+const jewellery_onsale = document.getElementById("jewellery_onsale");
 // const featured1=document.getElementById('featured1');
 // const arrival1=document.getElementById('arrival1');
 // const onsale1=document.getElementById('onsale1');
@@ -289,40 +280,37 @@ const jewellery_onsale=document.getElementById('jewellery_onsale');
 // const arrival3=document.getElementById('arrival3');
 // const onsale3=document.getElementById('onsale3');
 
-jewellery.addEventListener('click',function(){
-    box2.style.display="none";
-    box3.style.display="none";
-    box1.style.display="block";
-    jewellery_featured.style.display="block";
-    jewellery_arrival.style.display="block";
-    jewellery_featured.style.display="block";
-    watch_featured.style.display="none";
-    shoes_featured.style.display="none";
+jewellery.addEventListener("click", function () {
+  box2.style.display = "none";
+  box3.style.display = "none";
+  box1.style.display = "block";
+  jewellery_featured.style.display = "block";
+  jewellery_arrival.style.display = "block";
+  jewellery_featured.style.display = "block";
+  watch_featured.style.display = "none";
+  shoes_featured.style.display = "none";
+});
+watch.addEventListener("click", function () {
+  box3.style.display = "none";
+  box1.style.display = "none";
+  box2.style.display = "block";
+  watch_featured.style.display = "block";
+  jewellery_featured.style.display = "none";
+  jewellery_arrival.style.display = "none";
+  jewellery_featured.style.display = "none";
+  shoes_featured.style.display = "none";
+});
 
-})
-watch.addEventListener('click',function(){
-  box3.style.display="none";
-  box1.style.display="none";
-  box2.style.display="block";
-  watch_featured.style.display="block";
-  jewellery_featured.style.display="none";
-  jewellery_arrival.style.display="none";
-  jewellery_featured.style.display="none";
-  shoes_featured.style.display="none";
-
-})
-
-shoes.addEventListener('click',function(){
-  box1.style.display="none";
-  box2.style.display="none";
-  box3.style.display="block";
-  shoes_featured.style.display="block";
-  watch_featured.style.display="none";
-  jewellery_featured.style.display="none";
-  jewellery_arrival.style.display="none";
-  jewellery_featured.style.display="none";
-})
-
+shoes.addEventListener("click", function () {
+  box1.style.display = "none";
+  box2.style.display = "none";
+  box3.style.display = "block";
+  shoes_featured.style.display = "block";
+  watch_featured.style.display = "none";
+  jewellery_featured.style.display = "none";
+  jewellery_arrival.style.display = "none";
+  jewellery_featured.style.display = "none";
+});
 
 // featured1.addEventListener('onclick',function(){
 //   jewellery_featured.display="block";
@@ -395,4 +383,73 @@ shoes.addEventListener('click',function(){
 //   shoes_featured.style.display="block";
 // })
 
+document.addEventListener("DOMContentLoaded", function () {
+  const cartItems = document.getElementById("cart-items");
+  const cartQuantitySpan = document.querySelector(".cart_quantity");
+  const cartTotalPriceSpan = document.querySelector(".cart_total_price");
+  const headerCartPriceSpan = document.querySelector(".cart_text_quantity");
+  let totalQuantity = 0;
+  let totalPrice = 0;
 
+  function updateCartQuantity(amount) {
+    totalQuantity += amount;
+    cartQuantitySpan.textContent = totalQuantity;
+  }
+  function updateCartTotalPrice(amount) {
+    totalPrice += amount;
+    cartTotalPriceSpan.textContent = "Rs. " + totalPrice;
+    headerCartPriceSpan.textContent = "Rs. " + totalPrice;
+  }
+
+  document.querySelectorAll(".add-to-cart").forEach((button) => {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const productDiv =
+        this.closest(".product") || this.closest(".modal_body");
+
+      const productName = productDiv.querySelector("h2").textContent;
+      const productPrice = productDiv.querySelector('.new_price') ? parseFloat(productDiv.querySelector('.new_price').textContent.replace('Rs. ', '')) : parseFloat(productDiv.querySelector('.price').textContent.replace('Rs. ', ''));
+      const quantityInput = productDiv.querySelector('input[type="number"]');
+      const quantity = parseInt(quantityInput.value);
+      const imageSrc = productDiv.querySelector("img").src;
+
+      if (quantity > 0) {
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart_item");
+        cartItem.innerHTML = `
+                  <div class="cart_img">
+                      <a href="#"><img src="${imageSrc}" alt=""></a>
+                  </div>
+                  <div class="cart_info">
+                      <a href="#">${productName}</a>
+                      <span class="quantity">Qty : ${quantity}</span>
+                      <span class="price_cart">${productPrice}</span>
+                  </div>
+                  <div class="cart_remove">
+                      <a href="#" class="remove"><i class="ion-android-close"></i></a>
+                  </div>
+              `;
+
+        cartItems.appendChild(cartItem);
+        updateCartQuantity(quantity);
+        updateCartTotalPrice(productPrice * quantity)
+        // Clear the input field after adding to cart
+        quantityInput.value = "";
+
+        // Add event listener to remove item from cart
+        const removeButton = cartItem.querySelector(".remove");
+        removeButton.addEventListener("click", function () {
+          const quantity = parseInt( cartItem.querySelector(".quantity").textContent.replace("Qty : ", ""));
+          const price = parseFloat(cartItem.querySelector('.price_cart').textContent.replace('Rs. ', ''));
+
+          cartItems.removeChild(cartItem);
+          updateCartQuantity(-quantity);
+          updateCartTotalPrice(-price * quantity);
+        });
+      } else {
+        alert("Please enter a valid quantity.");
+      }
+    });
+  });
+});

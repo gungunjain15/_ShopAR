@@ -109,8 +109,8 @@
                                 </div>
                                 <div class="cart_link">
                                     <a href="#"><i class="ion-android-cart"></i><span class="cart_text_quantity">Rs.
-                                        15,998</span><i class="ion-chevron-down"></i></a>
-                                    <span class="cart_quantity">2</span>
+                                        0</span><i class="ion-chevron-down"></i></a>
+                                    <span class="cart_quantity">0</span>
 
                                     <!-- mini cart -->
                                     <div class="mini_cart">
@@ -122,9 +122,9 @@
                                                 <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
                                             </div>
                                         </div>
-                                        <div class="cart_item">
+                                        <!-- <div class="cart_item">
                                             <div class="cart_img">
-                                                <!-- <a href="#"><img src="images/nav-product/product.jpg" alt=""></a> -->
+                                                <a href="#"><img src="images/nav-product/product.jpg" alt=""></a>
                                                 <a href="#"><img src="images/nav-product/WhatsApp Image 2024-05-13 at 01.26.00_92dc40ee.jpg" alt=""></a>
                                             </div>
                                             <div class="cart_info">
@@ -135,8 +135,8 @@
                                             <div class="cart_remove">
                                                 <a href="#"><i class="ion-android-close"></i></a>
                                             </div>
-                                        </div>
-                                        <div class="cart_item">
+                                        </div> -->
+                                        <!-- <div class="cart_item">
                                             <div class="cart_img">
                                                 <a href="#"><img src="images/nav-product/product2.jpg" alt=""></a>
                                             </div>
@@ -149,10 +149,13 @@
                                                 <a href="#"><i class="ion-android-close"></i></a>
                                             </div>
                                         </div>
+                                         -->
+                                        <div id="cart-items"></div>
                                         <div class="cart_total">
                                             <span>Subtotal : </span>
-                                            <span>Rs. 15,998</span>
+                                            <span class="cart_total_price">Rs. 0</span>
                                         </div>
+
                                         <div class="mini_cart_footer">
                                             <div class="cart_button view_cart">
                                                 <a href="#">View Cart</a>
@@ -279,8 +282,8 @@
                                 <h1>Watches</h1>
                                 <span>Designed to be unlike anything else</span>
                                 <p class="slider_price">starting at <span>Rs. 26,100</span></p>
-                                <a href="#" class="button">Shop Now</a>
-                                <a href="#" class="button">TryOn</a>
+                                <a href="#" class="button" class="add-to-cart">Shop Now</a>
+                                <a href="https://singhprakriti4.github.io/Watch2/" class="button" target="_blank">TryOn</a>
                             </div>
                         </div>
                     </div>
@@ -296,7 +299,7 @@
                                 <h1>Shoes</h1>
                                 <span>Experience ShopAR best quality and comfy shoes</span>
                                 <p class="slider_price">starting at <span>Rs. 14,999</span></p>
-                                <a href="#" class="button">Shop Now</a>
+                                <a href="#" class="button" class="add-to-cart">Shop Now</a>
                                 <a href="#" class="button">TryOn</a>
                             </div>
                         </div>
@@ -313,7 +316,7 @@
                                 <h1>Necklace</h1>
                                 <span>22 Carat gold necklace for wedding</span>
                                 <p class="slider_price">starting at <span>Rs. 75,999</span></p>
-                                <a href="#" class="button">Shop Now</a>
+                                <a href="#" class="button" class="add-to-cart">Shop Now</a>
                                 <a href="#" class="button">TryOn</a>
                             </div>
                         </div>
@@ -2827,7 +2830,7 @@
                                                                                 title="Add to Wishlist"
                                                                                 data-toggle="tooltip"><span
                                                                                     class="ion-heart"></span></a></li>
-                                                                        <li class="add_to_cart"><a href="#"
+                                                                        <li class="add_to_cart1"><a href="#"
                                                                                 title="Add to Cart">Add to Cart</a></li>
                                                                             
                                                                         <li><a href="#" title="Compare"><i
@@ -3099,12 +3102,12 @@
                                                 <div class="custom-col-5">
                                                     <div class="single_product">
                                                         <div class="product_thumb">
-                                                            <a href="#" class="primary_img"><img src="images/watch_images/6a.jpg"
+                                                            <a href="#" class="primary_img"><img src="images/watch_images/6a.png"
                                                                     alt="product1"></a>
                                                             <a href="#" class="secondary_img"><img
-                                                                    src="images/watch_images/6b.jpg" alt="product1"></a>
+                                                                    src="images/watch_images/6b.png" alt="product1"></a>
                                                             <div class="quick_button">
-                                                                <a href="#" data-toggle="modal" data-target="#modal_box2"
+                                                                <a href="#" data-toggle="modal" data-target="#modal_box3"
                                                                     data-placement="top"
                                                                     data-original-title="quick view">Quick View</a>
                                                             </div>
@@ -3116,8 +3119,8 @@
                                                             </div>
                                                             <h3><a href="#">Watch</a></h3>
                                                             <div class="price_box">
-                                                                <span class="old_price">Rs. 999<br></span>
-                                                                <span class="current_price">Rs. 399</span>
+                                                                <span class="old_price">Rs. 1999<br></span>
+                                                                <span class="current_price">Rs. 599</span>
                                                             </div>
                                                             <div class="product_hover">
                                                                 <div class="product_ratings">
@@ -3149,7 +3152,7 @@
                                                                                 title="Add to Wishlist"
                                                                                 data-toggle="tooltip"><span
                                                                                     class="ion-heart"></span></a></li>
-                                                                        <li class="add_to_cart"><a href="#"
+                                                                        <li class="add_to_cart2"><a href="#"
                                                                                 title="Add to Cart">Add to Cart</a></li>
                                                                         <li><a href="#" title="Compare"><i
                                                                                     class="ion-ios-settings-strong"></i></a>
@@ -3436,8 +3439,8 @@
                                                             </div>
                                                             <h3><a href="#">Watch</a></h3>
                                                             <div class="price_box">
-                                                                <span class="old_price">Rs. 499<br></span>
-                                                                <span class="current_price">Rs. 999</span>
+                                                                <span class="old_price">Rs. 349<br></span>
+                                                                <span class="current_price">Rs. 1499</span>
                                                             </div>
                                                             <div class="product_hover">
                                                                 <div class="product_ratings">
@@ -6918,6 +6921,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal_body">
+                    <div class="product">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 col-sm-12">
@@ -6985,7 +6989,7 @@
                                     <div class="modal_add_to_cart mb-15">
                                         <form action="#">
                                             <input type="number" min="0" max="100" step="1">
-                                            <button type="submit">Add To Cart</button>
+                                            <button class="add-to-cart">Add To Cart</button>
                                             <button type="submit">Try On</button>
                                         </form>
                                     </div>
@@ -7009,9 +7013,12 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
     </div>
+    
+
     <div class="modal fade" id="modal_box2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -7019,6 +7026,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal_body">
+                    <div class="product">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 col-sm-12">
@@ -7026,7 +7034,7 @@
                                     <div class="tab-content product-details-large">
                                         <div class="tab-pane fade show active" id="tab1" role="tabpanel">
                                             <div class="modal_tab_img">
-                                                <a href="#"><img src="images/modal2/1.png" alt=""></a>
+                                                <a href="#" ><img src="images/modal2/1.png" alt=""></a>
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="tab2" role="tabpanel">
@@ -7085,9 +7093,9 @@
                                     </div>
                                     <div class="modal_add_to_cart mb-15">
                                         <form action="#">
-                                            <input type="number" min="0" max="100" step="1">
-                                            <button type="submit">Add To Cart</button>
-                                            <button type="submit">Try On</button>
+                                            <input type="number" min="0" max="100" step="1" >
+                                            <button class="add-to-cart">Add To Cart</button>
+                                            <a href="https://singhprakriti4.github.io/Watch1/" target="_blank"><button type="submit">Try On</button></a>
                                         </form>
                                     </div>
                                     <div class="modal_description mb-15">
@@ -7108,9 +7116,86 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade" id="modal_box3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal_body">
+                    <div class="product">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-5 col-sm-12">
+                                    <div class="modal_tab">
+                                        <div class="tab-content product-details-large">
+                                            <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                                <div class="modal_tab_img">
+                                                    <a href="#"><img src="images/modal3/6a.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                            <!-- Other tabs -->
+                                        </div>
+                                        <div class="modal_tab_button">
+                                            <ul class="nav product_navactive owl-carousel" role="tablist">
+                                                <li>
+                                                    <a href="#tab1" class="nav-link active" data-toggle="tab" role="tab"
+                                                        aria-controls="tab1" aria-selected="false"><img
+                                                            src="images/modal3/6a.png" alt=""></a>
+                                                </li>
+                                                <!-- Other tab buttons -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-12">
+                                    <div class="modal_right">
+                                        <div class="modal_title mb-10">
+                                            <h2>DANIEL KLEIN Analog Dark Blue Dial Men's</h2>
+                                        </div>
+                                        <div class="modal_price mb-10">
+                                            <span class="new_price">Rs. 599</span>
+                                            <span class="old_price">Rs. 1999</span>
+                                        </div>
+                                        <div class="see_all">
+                                            <a href="#">See All Features</a>
+                                        </div>
+                                        <div class="modal_add_to_cart mb-15">
+                                            <form action="#">
+                                                <input type="number" min="0" max="100" step="1" >
+                                                <button class="add-to-cart">Add To Cart</button>
+                                                <a href="https://singhprakriti4.github.io/Watch3/" target="_blank"><button type="button">Try On</button></a>
+                                            </form>
+                                        </div>
+                                        <div class="modal_description mb-15">
+                                            <p>This IIK-708M-DND Analog Day and Date Display wrist watch for Men and Boys from the latest collection of IIK COLLECTION will surely top your list of stylish watches. It is Featuring a elegant and formal Blue color Dial and attractive blue color Strap. this is a perfect pick for everyday wear. this Wrist watch is durable and will sit comfortably on your wrist. it is Featuring a classic round dial with stylish numerals inside, this watch for Men will retain its quality for the years to come.</p>
+                                        </div>
+                                        <div class="modal_social">
+                                            <h2>Share this Product</h2>
+                                            <ul>
+                                                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                                <li><a href="#"><i class="ion-social-rss"></i></a></li>
+                                                <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                                                <li><a href="#"><i class="ion-social-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- modal section ends -->
 
 
